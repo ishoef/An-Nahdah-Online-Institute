@@ -19,14 +19,53 @@ export default function LoginPage() {
     formState: { errors },
   } = useForm();
 
+  // const onSubmit = async (data) => {
+  //   setLoading(true);
+  //   try {
+  //     console.log("Login Attempt:", data);
+  //     alert("Logged in successfully!");
+  //   } catch (err) {
+  //     console.error(err);
+  //     alert("Login failed!");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const onSubmit = async (data) => {
     setLoading(true);
+
     try {
-      console.log("Login Attempt:", data);
-      alert("Logged in successfully!");
+      const res = await fetch(`http://localhost:5000/api/v1/auth/signin`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include", // ✅ important if you use httpOnly cookies
+        body: JSON.stringify({
+          email: data.email,
+          password: data.password,
+        }),
+      });
+
+      const result = await res.json();
+      console.log(result);
+      console.log(result?.token);
+
+      if (!res.ok) {
+        throw new Error(result.message || "Login failed");
+      }
+
+      // ✅ OPTION A: token returned in body
+      if (result.token) {
+        localStorage.setItem("token", result.token);
+      }
+
+      // ✅ redirect after login
+      window.location.href = "/dashboard"; // or router.push("/")
     } catch (err) {
-      console.error(err);
-      alert("Login failed!");
+      console.error("Login error:", err);
+      alert(err.message || "Invalid email or password");
     } finally {
       setLoading(false);
     }
@@ -35,24 +74,20 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex bg-background text-foreground">
       {/* Left Side - Visual Element (Desktop Only) */}
-      <div className="hidden lg:block lg:w-1/2 relative h-screen overflow-hidden rounded-tr-3xl rounded-br-3xl">
+      {/* <div className="hidden lg:block lg:w-1/2 relative h-screen overflow-hidden rounded-tr-3xl rounded-br-3xl">
         <Image
-          src="https://images.unsplash.com/photo-1520262454473-a1a82276a574?w=1600&auto=format&fit=crop&q=80"
+          src="https://images.unsplash.com/photo-1639437038507-749a056cd07c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODB8fHdoaXRlJTIwYmFja2dyb3VuZCUyMHNtYWxsJTIwb2JqZWN0fGVufDB8fDB8fHww"
           alt="Students studying — Ad-Dirasah"
           fill
           priority
           sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover object-center"
         />
-        {/* optional subtle overlay */}
-        {/* <div
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none"
-        /> */}
-      </div>
+       
+      </div> */}
 
       {/* Right Side - Login Form */}
-      <div className="w-full lg:w-1/2 flex flex-col items-center justify-center px-4 py-8">
+      <div className="w-full  flex flex-col items-center justify-center px-8 py-10">
         {/* Header Controls */}
         <div className="absolute top-6 right-6 flex items-center space-x-4">
           <ThemeToggle />
@@ -147,7 +182,7 @@ export default function LoginPage() {
               disabled={loading}
               className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3 rounded-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed mt-6"
             >
-              {loading ? "Logging in..." : "Sign In"}
+              {loading ? "Signing in..." : "Sign In"}
             </button>
           </form>
 

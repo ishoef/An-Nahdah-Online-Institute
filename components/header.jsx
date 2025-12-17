@@ -36,7 +36,11 @@ const Header = () => {
   }, [pathname]);
 
   // now it's safe to early-return based on pathname
-  if (pathname?.includes("login") || pathname?.includes("register"))
+  if (
+    pathname?.includes("login") ||
+    pathname?.includes("register") ||
+    pathname?.includes("reset-password")
+  )
     return null;
 
   const handleLogout = async () => {

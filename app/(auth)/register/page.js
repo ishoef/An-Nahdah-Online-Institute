@@ -30,21 +30,40 @@ export default function RegisterPage() {
   // UI-only submit. TODO: replace with real API call
   const onSubmit = async (data) => {
     setLoading(true);
+
     try {
-      // TODO: call your API: POST /api/register with JSON body {name,email,password,...}
-      // Example:
-      // const res = await fetch('/api/register', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(data) });
-      // handle res.ok / res.json messages and errors
-      await new Promise((r) => setTimeout(r, 800)); // simulate delay
-      reset();
+      const res = await fetch(`http://localhost:5000/api/v1/auth/signup`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include", // 🔥 important if backend sets cookies
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          password: data.password,
+          age: data.age || null,
+          gender: data.gender || null,
+        }),
+      });
+
+      const result = await res.json();
+      console.log(result);
+
+      if (!res.ok) {
+        throw new Error(result.message || "Registration failed");
+      }
+
+      reset(); // clear form
       router.push("/login?registered=1");
     } catch (err) {
-      // TODO: surface error message from server (toast or inline)
-      alert("Registration failed (UI-only).");
+      console.error("Register error:", err);
+      alert(err.message || "Registration failed");
     } finally {
       setLoading(false);
     }
   };
+
 
   return (
     <div className="min-h-screen flex bg-background text-foreground">

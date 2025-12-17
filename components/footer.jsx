@@ -9,7 +9,8 @@ export default function Footer() {
   if (
     !pathname.includes("login") &&
     !pathname.includes("register") &&
-    !pathname.includes("dashboard")
+    !pathname.includes("dashboard") &&
+    !pathname.includes("reset-password")
   ) {
     return (
       <footer className="bg-gray-800 border-t border-gray-300 dark:border-gray-700 dark:bg-gray-900 text-gray-50 dark:text-gray-200 transition-colors duration-300">
