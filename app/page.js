@@ -24,7 +24,7 @@ export default function Home() {
       <CooSection />
       <TestimonialsSlider />
       <TeachersSection />
-      <NewsSection />
+      {/* <NewsSection /> */}
       <JoinOurCommunity />
       <FAQ />
       <Donation />

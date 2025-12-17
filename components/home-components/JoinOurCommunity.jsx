@@ -7,7 +7,7 @@ import { FaWhatsapp, FaFacebookF, FaTelegramPlane } from "react-icons/fa";
 
 const JoinOurCommunity = () => {
   return (
-    <Section>
+    <Section >
       <div className="text-center mb-8">
         <Title
           title1="Join"
@@ -17,7 +17,7 @@ const JoinOurCommunity = () => {
       </div>
 
       {/* Card Container */}
-      <div className="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700">
+      <div className="max-w-3xl mx-auto bg-nhd-700 dark:bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-100 dark:border-gray-700">
         {/* QR + Text */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* QR Code */}
@@ -33,14 +33,14 @@ const JoinOurCommunity = () => {
 
           {/* Text Content */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
+            <h3 className="text-xl font-semibold text-white dark:text-gray-100 mb-2">
               Scan & Join Instantly
             </h3>
-            <p className="text-gray-500 dark:text-gray-200 mb-4">
+            <p className="text-gray-100 dark:text-gray-200 mb-4">
               Scan the QR code to instantly join our online community and stay
               connected with updates, events, and more.
             </p>
-            <p className="text-sm text-gray-400 dark:text-gray-200 italic">
+            <p className="text-sm text-gray-200 dark:text-gray-200 italic">
               *You can also use one of the buttons below to join directly.
             </p>
           </div>

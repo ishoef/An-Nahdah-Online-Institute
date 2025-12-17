@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { FaBookOpen } from "react-icons/fa"; // Dummy logo icon
+import LogoWithLicense from "../ui/LogoWithLicense";
 
 const FounderSection = () => {
   return (
@@ -14,7 +15,7 @@ const FounderSection = () => {
           {/* Photo Card */}
           <div className="overflow-hidden rounded-lg shadow-lg transform transition-all z-10 duration-500 hover:scale-105 hover:rotate-1">
             <img
-              src="https://images.unsplash.com/photo-1722409195216-b4a54601d38c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGhlJTIwY2VvfGVufDB8fDB8fHww"
+              src="https://i.ibb.co/wNhsFwtS/profile.jpg"
               alt="Founder"
               className="w-full h-[400px] md:h-[500px] object-cover rounded-lg"
             />
@@ -50,24 +51,12 @@ const FounderSection = () => {
               Student, Al-Azhar University, Cairo, Egypt (3rd Year)
             </p>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Founder & CEO — An-Nahdah Online Academy - AOI
+              Founder & CEO — An-Nahdah Online Institute - AOI
             </p>
           </div>
 
           {/* Logo + License */}
-          <div className="mt-6 flex items-center gap-3">
-            <div className="p-2 rounded-full bg-gray-200 dark:bg-gray-800">
-              <FaBookOpen className="text-[#1f789b] dark:text-gray-300 text-xl" />
-            </div>
-            <div>
-              <p className="text-[#204459] dark:text-gray-200 font-medium">
-                An-Nahdah Online Academy - AOI
-              </p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                License No: TRAD/DNCC/009595/2022
-              </p>
-            </div>
-          </div>
+          <LogoWithLicense />
         </div>
       </div>
     </section>
