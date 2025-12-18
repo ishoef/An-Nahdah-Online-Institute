@@ -12,6 +12,7 @@ import CourseShowcase from "@/components/home-components/course-showcase";
 import TeachersSection from "@/components/home-components/our-teachers";
 import JoinOurCommunity from "@/components/home-components/JoinOurCommunity";
 import Hero2 from "@/components/home-components/hero2";
+import WhyChooseUs from "@/components/home-components/WhyChooseUs";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       <CooSection />
       <TestimonialsSlider />
       <TeachersSection />
+      <WhyChooseUs />
       {/* <NewsSection /> */}
       <JoinOurCommunity />
       <FAQ />

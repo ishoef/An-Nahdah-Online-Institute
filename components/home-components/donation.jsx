@@ -8,7 +8,7 @@ const Donation = () => {
     <Section>
       <div className="flex justify-center items-center flex-col text-center">
         <span className="text-8xl">
-          <FaHeart className="animate-pulse text-red-500" />
+          <FaHeart className="animate-pulse text-nhd-500" />
         </span>
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102b3c] dark:text-gray-100 mt-4">

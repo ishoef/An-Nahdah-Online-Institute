@@ -13,7 +13,7 @@ export default function Hero() {
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
             Master Islam & Modern
             <br />
-            <span className="text-[#b7e4f8] dark:text-gray-400">
+            <span className="text-nhd-300 dark:text-nhd-400">
               Skills Together
             </span>
           </h1>
