@@ -11,11 +11,13 @@ import CourseFeatures from "@/components/home-components/learningMaterials";
 import CourseShowcase from "@/components/home-components/course-showcase";
 import TeachersSection from "@/components/home-components/our-teachers";
 import JoinOurCommunity from "@/components/home-components/JoinOurCommunity";
+import Hero2 from "@/components/home-components/hero2";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      {/* <Hero2 /> */}
       <CourseCategory />
       <FeaturedCourses />
       <CourseFeatures />

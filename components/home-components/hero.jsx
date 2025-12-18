@@ -1,125 +1,120 @@
 "use client";
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import Image from "next/image";
-import { Download, ArrowRight, CheckCircle2 } from "lucide-react";
-import { Badge } from "../ui/badge";
-import usePwaMode from "@/hooks/usePwaMode/usePwaMode"; 
+import Link from "next/link";
 
-const Hero = () => {
-  const isStandalone = usePwaMode(); 
+export default function HeroZikr() {
   return (
-    <section
-      className="relative overflow-hidden 
-      bg-gradient-to-br from-nhd-300 via-nhd-100 to-nhd-300 
-      dark:from-gray-900 dark:via-gray-800 dark:to-gray-900
-      py-14 sm:py-10 md:py-12 lg:py-22 transition-colors duration-500"
-    >
-      {/* Decorative Pattern */}
-      <div className="absolute inset-0 islamic-pattern opacity-20 dark:opacity-10"></div>
+    <section className="relative overflow-hidden bg-[#0b5f78] text-white">
+      {/* Top Hero */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 md:py-24 flex flex-col-reverse md:flex-row gap-14 items-center">
+        {/* Left Content */}
+        <div className="space-y-6 w-full md:basis-2/3 text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+            Master Islam & Modern
+            <br />
+            <span className="text-[#b7e4f8]">Skills Together</span>
+          </h1>
 
-      <div
-        className="absolute inset-0 opacity-20 dark:opacity-10"
-        style={{
-          backgroundImage: "radial-gradient(currentColor 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-          color: "#3b82f6",
-        }}
-      ></div>
+          <p className="max-w-xl mx-auto md:mx-0 text-white/80 text-base sm:text-lg">
+            An-Nahdah Institute brings you authentic Islamic education from
+            qualified scholars, combined with practical life skills — all in one
+            beautiful, easy-to-use platform.
+          </p>
 
-      <div className="container mx-auto relative z-10 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          {/* LEFT SIDE */}
-          <div className="order-2 lg:order-1">
-            {/* Badge */}
-            {isStandalone ? (
-              ""
-            ) : (
-              <Badge className="mb-6 bg-[#206380] text-white dark:bg-[#3eb2d2] dark:text-gray-900 shadow text-xs sm:text-sm md:text-base">
-                <Download className="mr-2 h-4 w-4" />
-                Install Our App for Offline Learning
-              </Badge>
-            )}
-
-            {/* Title */}
-            <h1
-              className=" text-2xl sm:text-4xl md:text-5xl lg:text-5xl 
-              font-bold text-gray-900 dark:text-white mb-6 
-              leading-snug sm:leading-tight text-center lg:text-left"
+          <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
+            <Link
+              href="#"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-[#0b5f78] font-semibold hover:bg-white/90 transition"
             >
-              Empower Your Journey with{" "}
-              <span className="text-nhd-700 dark:text-blue-400">
-                Islamic Knowledge
-              </span>{" "}
-              & Modern Skills
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-base sm:text-lg md:text-2xl lg:text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl text-center lg:text-left mx-auto lg:mx-0">
-              An-Nahdah Online Institute blends authentic Islamic education with
-              practical skill development. Learn from qualified scholars and
-              expert instructors, anytime, anywhere.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col lg:flex-row gap-4">
-              <Button
-                size="lg"
-                variant="default"
-                asChild
-                className="px-6 sm:px-8 py-3 text-base sm:text-lg bg-[#206380] hover:bg-[#1f789b] dark:bg-[#3eb2d2] dark:hover:bg-[#7bd0e5]"
-              >
-                <Link href="/register">
-                  Start Learning Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="px-6 sm:px-8 py-3 text-base sm:text-lg border-[#1f789b] text-[#1f789b] hover:bg-[#1f789b] hover:text-white 
-                dark:border-gray-300 dark:text-gray-300 dark:hover:bg-gray-300 dark:hover:text-gray-900"
-                asChild
-              >
-                <Link href="/courses">Browse Courses</Link>
-              </Button>
-            </div>
-
-            {/* Stats */}
-            <div className="mt-10 sm:mt-12 flex sm:flex-row flex-wrap gap-5 sm:gap-8 text-gray-800 dark:text-gray-200 justify-center lg:justify-start">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                <span className="text-sm sm:text-base">10,000+ Students</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                <span className="text-sm sm:text-base">200+ Courses</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                <span className="text-sm sm:text-base">Certified Scholars</span>
-              </div>
-            </div>
+              Start Free Trial
+            </Link>
+            <Link
+              href="/courses"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/40 hover:bg-white/10 transition"
+            >
+              Explore Courses
+            </Link>
           </div>
+        </div>
 
-          {/* RIGHT SIDE IMAGE */}
-          <div className="order-1 lg:order-2 relative">
-            <div className="relative h-60 sm:h-72 md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+        {/* Right Image & Badges */}
+        <div className="hidden md:block">
+          <div className="relative w-full flex justify-center md:justify-end">
+            {/* Image */}
+            <div className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[520px]">
               <Image
                 src="/images/hero.png"
-                alt="Students learning online"
-                fill
-                className="object-cover"
+                alt="Child holding Quran"
+                width={820}
+                height={520}
                 priority
+                className="w-full h-auto drop-shadow-2xl rounded-2xl"
               />
+            </div>
+
+            {/* Rating Card */}
+            <div className="absolute top-6 right-2 sm:top-10 sm:-right-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 text-xs sm:text-sm">
+              <p className="font-bold text-base sm:text-lg">5.0 ⭐⭐⭐⭐⭐</p>
+              <p className="text-white/80">Trusted by users worldwide</p>
+            </div>
+
+            {/* Quran Card */}
+            <div className="absolute bottom-6 right-2 sm:bottom-14 sm:-right-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-4 max-w-[260px]">
+              <div className="flex items-center gap-3">
+                <Image
+                  src="/images/quran-icon.png"
+                  alt="Quran"
+                  width={50}
+                  height={50}
+                />
+                <div>
+                  <p className="font-semibold text-sm">
+                    Pure, guided Qur'an education
+                  </p>
+                  <p className="text-xs text-white/70">
+                    Helping you connect deeply with the Book of Allah
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom Stats Section */}
+      <div className="bg-[#b7e4f8] text-[#0b5f78] rounded-t-2xl">
+        <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5 items-start">
+          {/* Text */}
+          <div className="space-y-3 sm:col-span-2 text-center sm:text-left">
+            <h3 className="text-xl sm:text-2xl font-bold leading-tight">
+              Your trusted platform for Islamic education
+            </h3>
+            <p className="text-sm leading-relaxed text-[#0b5f78]/80 max-w-md mx-auto sm:mx-0">
+              A reliable learning space offering authentic Islamic knowledge,
+              guided by qualified scholars through structured and trustworthy
+              programs.
+            </p>
+          </div>
+
+          {/* Stats */}
+          {[
+            { value: "3K+", label: "Worldwide Learners" },
+            { value: "400+", label: "Live & Recorded Sessions" },
+            { value: "50+", label: "Certified Instructors" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="text-center bg-white/60 backdrop-blur-md rounded-2xl p-6 shadow-sm hover:shadow-md transition"
+            >
+              <p className="text-3xl sm:text-4xl font-extrabold">
+                {item.value}
+              </p>
+              <p className="text-sm mt-1 text-[#0b5f78]/80">{item.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
-};
-
-export default Hero;
+}
