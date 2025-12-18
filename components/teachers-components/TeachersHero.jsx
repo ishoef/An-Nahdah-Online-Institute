@@ -2,6 +2,8 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
+
+
 const TeachersHero = () => {
   return (
     <div className="mb-8 sm:mb-12 hidden md:block">

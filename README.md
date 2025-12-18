@@ -1,7 +1,7 @@
 # 🕌 An-Nahdah Online Institute  
 ### Progressive Islamic E-Learning Platform (Next.js + Node.js + PWA)
 
-![App Preview](./public/Screenshot_10.png)
+![App Preview](./public/An-Nahdah-Home-page.png)
 
 ---
 
