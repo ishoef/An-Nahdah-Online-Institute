@@ -19,8 +19,8 @@ const courses = [
     description:
       "কুরআন, হাদীস, ফিকহসহ বিভিন্ন বিষয়ে যোগ্য আলিমদের কাছ থেকে শিক্ষা গ্রহণ করুন",
     icon: BookOpen,
-    iconBg: "bg-blue-500/10 dark:bg-blue-500/30",
-    iconColor: "text-[#206380] dark:text-blue-400",
+    iconBg: "bg-nhd-500/10 dark:bg-nhd-500/30",
+    iconColor: "text-[#206380] dark:text-nhd-400",
     badge: "১৫০+ কোর্স",
     image: "/images/islamic.png",
     highlights: [
@@ -31,7 +31,7 @@ const courses = [
     ],
     link: "/islamic-knowledge",
     accent:
-      "bg-[#206380] hover:bg-[#1f789b] dark:bg-blue-500 dark:hover:bg-blue-600",
+      "bg-[#206380] hover:bg-[#1f789b] dark:bg-nhd-500 dark:hover:bg-nhd-600",
   },
   {
     id: 2,
@@ -39,8 +39,8 @@ const courses = [
     description:
       "ক্যারিয়ার গঠন ও উদ্যোক্তা হওয়ার জন্য আধুনিক দক্ষতায় পারদর্শী হোন",
     icon: GraduationCap,
-    iconBg: "bg-blue-500/20 dark:bg-gray-500/30",
-    iconColor: "text-[#206380] dark:text-blue-400",
+    iconBg: "bg-nhd-500/20 dark:bg-gray-500/30",
+    iconColor: "text-[#206380] dark:text-nhd-400",
     badge: "৮০+ কোর্স",
     image: "/images/skill.png",
     highlights: [
@@ -51,7 +51,7 @@ const courses = [
     ],
     link: "/skills",
     accent:
-      "bg-[#206380] hover:bg-[#1f789b] dark:bg-blue-500 dark:hover:bg-blue-600",
+      "bg-[#206380] hover:bg-[#1f789b] dark:bg-nhd-500 dark:hover:bg-nhd-600",
   },
 ];
 

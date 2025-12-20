@@ -7,6 +7,7 @@ import {
   FaUsers,
   FaTasks,
 } from "react-icons/fa";
+import Title from "../ui/title";
 
 const features = [
   {
@@ -41,24 +42,19 @@ const features = [
   },
 ];
 
-
 export default function CourseFeatures() {
   return (
     <section className="py-16 px-4 bg-gradient-to-b from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-900 transition-colors duration-300">
       <div className="max-w-5xl mx-auto text-center">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102b3c] dark:text-white">
-            আমাদের কোর্সের{" "}
-            <span className="text-[#206380] dark:text-blue-400">
-              শিক্ষা উপকরণসমূহ
-            </span>
-          </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
-            আপনার শেখাকে আরও সহজ ও কার্যকর করতে আমাদের কোর্সে যা কিছু
-            অন্তর্ভুক্ত রয়েছে
-          </p>
-        </div>
+
+        <Title
+          title1={"আমাদের কোর্সের"}
+          title2={"শিক্ষা উপকরণসমূহ"}
+          subTitle={
+            "আপনার শেখাকে আরও সহজ ও কার্যকর করতে আমাদের কোর্সে যা কিছুঅন্তর্ভুক্ত রয়েছে"
+          }
+        />
 
         {/* Card Container */}
         <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">

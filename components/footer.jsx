@@ -24,8 +24,8 @@ export default function Footer() {
           {/* Brand Column - Wider */}
           <div className="lg:col-span-5 space-y-8">
             <div className="flex items-center gap-4">
-              <div className="w-14 h-14 bg-[#206380] rounded-2xl flex items-center justify-center text-white text-3xl shadow-xl">
-                Book
+              <div className="w-14 h-14 bg-[#206380] rounded-2xl flex items-center justify-center text-white text-xl font-bold shadow-xl">
+                AOI
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-5">
+            <h3 className="font-semibold text-nhd-700 dark:text-white mb-5">
               কোর্সসমূহ
             </h3>
             <ul className="space-y-3 text-gray-600 dark:text-gray-300">
@@ -90,7 +90,7 @@ export default function Footer() {
 
           {/* Company */}
           <div className="lg:col-span-2">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-5">
+            <h3 className="font-semibold text-nhd-700 dark:text-white mb-5">
               ইনস্টিটিউট
             </h3>
             <ul className="space-y-3 text-gray-600 dark:text-gray-300">
@@ -117,8 +117,8 @@ export default function Footer() {
 
           {/* Newsletter - Right Side */}
           <div className="lg:col-span-3">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-3">
-              আলোর পথে থাকুন
+            <h3 className="font-semibold text-nhd-700 dark:text-white mb-3">
+              সর্বদা আপডেট থাকুন
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
               নতুন কোর্স, খুতবা, এবং তাজা স্মারক — সাপ্তাহিকভাবে প্রেরিত।
