@@ -2,42 +2,43 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import Title from "../ui/title";
 
 const faqs = [
   {
-    question: "1. What is An-Nahdah?",
+    question: "১. আন-নাহদাহ কী?",
     answer:
-      "An-Nahdah is a comprehensive online educational platform dedicated to providing authentic Islamic knowledge and practical skills. It focuses on structured learning based on the life of the Prophet ﷺ, his teachings, and the values of the Sahabah. The platform helps students not only understand Islamic principles but also implement them in daily life. Through interactive lessons, quizzes, assignments, and discussion sessions, learners can develop a balanced understanding of faith, character, and contemporary skills applicable in education, work, and social settings.",
+      "আন-নাহদাহ একটি সমগ্র অনলাইন শিক্ষামূলক প্ল্যাটফর্ম যা প্রামাণিক ইসলামী জ্ঞান এবং ব্যবহারিক দক্ষতা প্রদানে নিবেদিত। এটি নবী ﷺ-এর জীবন, তাঁর শিক্ষা এবং সাহাবাদের মূল্যবোধের ভিত্তিতে কাঠামোবদ্ধ শিক্ষার উপর গুরুত্ব দেয়। প্ল্যাটফর্মটি শিক্ষার্থীদের কেবল ইসলামী নীতি বোঝার নয়, সেগুলো দৈনন্দিন জীবনে প্রয়োগ করার ক্ষেত্রেও সহায়তা করে। ইন্টারেক্টিভ পাঠ, কুইজ, অ্যাসাইনমেন্ট এবং আলোচনাসভা মাধ্যমে শিক্ষার্থীরা ধর্ম, চরিত্র এবং আধুনিক দক্ষতার সমন্বিত বোঝাপড়া গড়ে তুলতে পারে, যা শিক্ষা, কাজ এবং সামাজিক জীবনে প্রয়োগযোগ্য।",
   },
   {
-    question: "2. What can I learn on this website?",
+    question: "২. আমি এই ওয়েবসাইটে কী শিখতে পারি?",
     answer:
-      "An-Nahdah offers a wide range of courses covering the Prophet's Seerah, Islamic history, lives of the Sahabah, ethics, and character development. In addition to theoretical knowledge, learners gain practical guidance on applying these lessons in their daily lives. The platform also offers quizzes, assignments, and discussion forums that help reinforce learning, encourage critical thinking, and facilitate peer interaction. For those seeking professional skills, some courses provide training in areas like Arabic grammar, digital literacy, and ethical entrepreneurship.",
+      "আন-নাহদাহ নবীর সীরাহ, ইসলামী ইতিহাস, সাহাবাদের জীবন, নৈতিকতা এবং চরিত্র উন্নয়নসহ বিভিন্ন কোর্স সরবরাহ করে। তাত্ত্বিক জ্ঞানের পাশাপাশি, শিক্ষার্থীরা দৈনন্দিন জীবনে এই পাঠগুলো প্রয়োগের ব্যবহারিক নির্দেশনা পায়। প্ল্যাটফর্মে কুইজ, অ্যাসাইনমেন্ট এবং আলোচনা ফোরাম রয়েছে যা শেখাকে শক্তিশালী করে, সমালোচনামূলক চিন্তাভাবনা উৎসাহিত করে এবং সহপাঠী সংযোগ সহজ করে। পেশাদার দক্ষতা অর্জনের জন্য কিছু কোর্স আরবী ব্যাকরণ, ডিজিটাল সাক্ষরতা এবং নৈতিক উদ্যোক্তাবৃত্তি প্রশিক্ষণ প্রদান করে।",
   },
   {
-    question: "3. How do I earn certificates?",
+    question: "৩. আমি কীভাবে সার্টিফিকেট অর্জন করব?",
     answer:
-      "Certificates are awarded upon successful completion of the course requirements. Each course is divided into lessons that include learning material, examples, and quizzes. To earn a certificate, learners must achieve the required passing marks on quizzes and assessments, complete any assignments, and participate in discussion sessions if applicable. After successfully passing the final evaluation, learners receive a digital certificate that can be downloaded, shared on professional platforms, or included in resumes. Certificates serve as recognition of the learner's knowledge and effort.",
+      "কোর্সের শর্তাবলী সফলভাবে সম্পন্ন করার পর সার্টিফিকেট প্রদান করা হয়। প্রতিটি কোর্সে শেখার উপাদান, উদাহরণ এবং কুইজসহ পাঠ ভাগ করা থাকে। সার্টিফিকেট পেতে শিক্ষার্থীদের কুইজ এবং মূল্যায়নে নির্ধারিত নম্বর অর্জন করতে হবে, অ্যাসাইনমেন্ট সম্পন্ন করতে হবে এবং প্রয়োজনে আলোচনাসভায় অংশগ্রহণ করতে হবে। চূড়ান্ত মূল্যায়ন সফলভাবে সম্পন্ন করার পর শিক্ষার্থীরা একটি ডিজিটাল সার্টিফিকেট পান যা ডাউনলোড, পেশাদার প্ল্যাটফর্মে শেয়ার বা রিজিউমে অন্তর্ভুক্ত করা যায়। সার্টিফিকেট শিক্ষার্থীর জ্ঞান এবং প্রচেষ্টার স্বীকৃতি হিসেবে কাজ করে।",
   },
   {
-    question: "4. Is the website free?",
+    question: "৪. ওয়েবসাইটটি কি বিনামূল্য?",
     answer:
-      "Most of An-Nahdah's courses and content are completely free to ensure that authentic Islamic education is accessible to everyone. However, some premium courses, special workshops, or certificate programs may require a small subscription fee. This fee helps maintain high-quality content, support course instructors, and ensure continuous development of new resources. Even for premium courses, An-Nahdah provides detailed previews and trial lessons so learners can assess the content before subscribing.",
+      "আন-নাহদাহ-এর বেশিরভাগ কোর্স এবং কন্টেন্ট সম্পূর্ণ বিনামূল্য যাতে প্রামাণিক ইসলামী শিক্ষা সবার জন্য অ্যাক্সেসযোগ্য হয়। তবে কিছু প্রিমিয়াম কোর্স, বিশেষ কর্মশালা বা সার্টিফিকেট প্রোগ্রাম ছোট একটি সাবস্ক্রিপশন ফি দাবি করতে পারে। এই ফি উচ্চমানের কন্টেন্ট বজায় রাখা, কোর্স ইনস্ট্রাক্টরদের সমর্থন এবং নতুন সংস্থান ক্রমাগত উন্নয়নের জন্য ব্যবহৃত হয়। প্রিমিয়াম কোর্সের জন্যও আন-নাহদাহ বিস্তারিত প্রিভিউ এবং ট্রায়াল পাঠ প্রদান করে যাতে শিক্ষার্থীরা সাবস্ক্রিপশন করার আগে কন্টেন্ট মূল্যায়ন করতে পারে।",
   },
   {
-    question: "5. How does the learning process work?",
+    question: "৫. শেখার প্রক্রিয়াটি কীভাবে কাজ করে?",
     answer:
-      "The learning process on An-Nahdah is carefully structured to provide a smooth and effective experience. Each topic is presented as a lesson with clear explanations, real-life examples, and practical applications. Learners progress through lessons step by step, completing quizzes, assignments, and discussion sessions designed to reinforce understanding. This method ensures that knowledge is not only memorized but also internalized and applied in daily life. Learners can revisit lessons, track their progress, and engage in peer discussions to deepen comprehension.",
+      "আন-নাহদাহ-তে শেখার প্রক্রিয়া সুচারুভাবে এবং কার্যকরভাবে পরিকল্পিত। প্রতিটি বিষয় পাঠ হিসেবে উপস্থাপন করা হয় স্পষ্ট ব্যাখ্যা, বাস্তব উদাহরণ এবং ব্যবহারিক প্রয়োগসহ। শিক্ষার্থীরা ধাপে ধাপে পাঠ শেষ করে, কুইজ, অ্যাসাইনমেন্ট এবং আলোচনাসভার মাধ্যমে বোঝাপড়া শক্তিশালী করে। এই পদ্ধতি নিশ্চিত করে যে জ্ঞান কেবল মুখস্থ নয়, অন্তর্গত এবং দৈনন্দিন জীবনে প্রয়োগযোগ্য। শিক্ষার্থীরা পাঠ পুনরায় দেখতে, অগ্রগতি ট্র্যাক করতে এবং সহপাঠীর সঙ্গে আলোচনায় অংশগ্রহণ করতে পারে বোঝাপড়া গভীর করার জন্য।",
   },
   {
-    question: "6. Can I learn using my mobile device?",
+    question: "৬. আমি কি মোবাইল ডিভাইস ব্যবহার করে শিখতে পারি?",
     answer:
-      "Yes! An-Nahdah is fully responsive and optimized for mobile, tablet, and desktop devices. The platform allows you to learn anytime and anywhere, whether commuting, at home, or at work. The mobile interface is designed for readability and smooth navigation, with appropriately sized cards, text, and interactive elements. Video lessons, quizzes, and assignments are all mobile-friendly, ensuring that learners do not miss out on any content while on the go.",
+      "হ্যাঁ! আন-নাহদাহ সম্পূর্ণরূপে রেস্পন্সিভ এবং মোবাইল, ট্যাবলেট ও ডেস্কটপ ডিভাইসের জন্য অপ্টিমাইজ করা হয়েছে। প্ল্যাটফর্মটি যেকোনো সময় এবং যে কোনো জায়গা থেকে শেখার সুযোগ দেয়, যাত্রাপথে, বাড়িতে বা কাজে থাকাকালীন। মোবাইল ইন্টারফেসটি পড়ার সুবিধা এবং নেভিগেশনের জন্য ডিজাইন করা হয়েছে, যথাযথ আকারের কার্ড, টেক্সট এবং ইন্টারেক্টিভ উপাদানসহ। ভিডিও পাঠ, কুইজ এবং অ্যাসাইনমেন্ট সব মোবাইল-ফ্রেন্ডলি, যা শিক্ষার্থীরা চলাফেরার সময় কোনও কন্টেন্ট মিস না করে।",
   },
   {
-    question: "7. Do I need to know English to learn?",
+    question: "৭. আমি কি শিখতে ইংরেজি জানতে হবে?",
     answer:
-      "No, English is not a requirement. Most courses are offered in English, but An-Nahdah also includes regional languages where applicable to ensure accessibility. The platform is designed to accommodate learners from diverse backgrounds, making it easier to understand complex Islamic concepts without language barriers. In addition, lessons include explanations, examples, and visuals to reinforce comprehension for learners who may not be fluent in English.",
+      "না, ইংরেজি জানা আবশ্যক নয়। বেশিরভাগ কোর্স ইংরেজিতে দেওয়া হয়, তবে আন-নাহদাহ প্রয়োজন অনুযায়ী আঞ্চলিক ভাষাও অন্তর্ভুক্ত করে যাতে অ্যাক্সেসযোগ্যতা নিশ্চিত হয়। প্ল্যাটফর্মটি বিভিন্ন পটভূমি থেকে আসা শিক্ষার্থীদের জন্য ডিজাইন করা হয়েছে, যা জটিল ইসলামী ধারণাগুলো ভাষার বাধা ছাড়াই বোঝা সহজ করে। এছাড়াও, পাঠে ব্যাখ্যা, উদাহরণ এবং ভিজ্যুয়াল রয়েছে যা ইংরেজিতে প্রवीণ নয় এমন শিক্ষার্থীদের বোঝাপড়া শক্তিশালী করে।",
   },
 ];
 
@@ -52,15 +53,13 @@ export default function FAQ() {
     <section className="border-t border-t-gray-200 dark:border-t-gray-700 bg-gradient-to-r from-blue-100 via-blue-50 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#153151] dark:text-white">
-            Frequently Asked{" "}
-            <span className="text-[#206380] dark:text-blue-400">Questions</span>
-          </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Common questions about learning at An-Nahdah
-          </p>
-        </div>
+        
+
+        <Title
+          title1={"প্রায়শই জিজ্ঞাসিত"}
+          title2={"প্রশ্নসমূহ"}
+          subTitle={"আন-নাহদাহ-তে শিক্ষার সঙ্গে সম্পর্কিত সাধারণ প্রশ্নসমূহ"}
+        />
 
         {/* FAQ Items */}
         <div className="space-y-4">

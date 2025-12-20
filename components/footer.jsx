@@ -29,18 +29,18 @@ export default function Footer() {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  An-Nahdah
+                  আন-নাহদাহ
                 </h1>
                 <p className="text-sm text-[#206380] font-medium">
-                  Online Institute
+                  অনলাইন ইনস্টিটিউট
                 </p>
               </div>
             </div>
 
             <p className="text-gray-600 dark:text-gray-300 max-w-md leading-relaxed">
-              Empowering the modern Muslim with authentic Islamic scholarship
-              and practical life skills — rooted in tradition, built for
-              tomorrow.
+              আধুনিক মুসলিমদের প্রামাণিক ইসলামী শিক্ষার সঙ্গে ব্যবহারিক
+              জীবনদক্ষতা অর্জনে সক্ষম করা — ঐতিহ্যের ভিত্তিতে, ভবিষ্যতের জন্য
+              গঠিত।
             </p>
 
             {/* Social Icons */}
@@ -64,15 +64,15 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="lg:col-span-2">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-5">
-              Courses
+              কোর্সসমূহ
             </h3>
             <ul className="space-y-3 text-gray-600 dark:text-gray-300">
               {[
-                "Islamic Studies",
-                "Quranic Arabic",
-                "Tajweed Mastery",
-                "Life Skills",
-                "Certificates",
+                "ইসলামিক স্টাডিজ",
+                "কুরআনিক আরবী",
+                "তাজউইদ মাস্টারি",
+                "লাইফ স্কিলস",
+                "সার্টিফিকেট",
               ].map((item) => (
                 <li key={item}>
                   <a
@@ -91,33 +91,37 @@ export default function Footer() {
           {/* Company */}
           <div className="lg:col-span-2">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-5">
-              Institute
+              ইনস্টিটিউট
             </h3>
             <ul className="space-y-3 text-gray-600 dark:text-gray-300">
-              {["About Us", "Our Scholars", "Donate", "Contact", "FAQ"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-sm hover:text-[#206380] transition-colors inline-flex items-center group"
-                    >
-                      <span className="group-hover:translate-x-1 transition">
-                        {item}
-                      </span>
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                "আমাদের সম্পর্কে",
+                "আমাদের আলেমগণ",
+                "দান করুন",
+                "যোগাযোগ",
+                "প্রায়শই জিজ্ঞাসিত প্রশ্ন",
+              ].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-sm hover:text-[#206380] transition-colors inline-flex items-center group"
+                  >
+                    <span className="group-hover:translate-x-1 transition">
+                      {item}
+                    </span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Newsletter - Right Side */}
           <div className="lg:col-span-3">
             <h3 className="font-semibold text-gray-900 dark:text-white mb-3">
-              Stay in the Light
+              আলোর পথে থাকুন
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-              New courses, khutbahs, and reminders — delivered weekly.
+              নতুন কোর্স, খুতবা, এবং তাজা স্মারক — সাপ্তাহিকভাবে প্রেরিত।
             </p>
 
             <form className="space-y-3">
@@ -130,7 +134,7 @@ export default function Footer() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
+                  placeholder="আপনার ইমেইল লিখুন"
                   className="w-full pl-12 pr-4 py-4 rounded-xl border border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#206380] focus:border-transparent transition"
                 />
               </div>
@@ -138,7 +142,7 @@ export default function Footer() {
                 type="submit"
                 className="w-full bg-[#206380] hover:bg-[#185060] text-white font-medium py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <span>Subscribe Now</span>
+                <span>এখনই সাবস্ক্রাইব করুন</span>
               </button>
             </form>
           </div>
@@ -147,21 +151,21 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            © {new Date().getFullYear()} An-Nahdah Online Institute • Made with
-            love for the Ummah
+            © {new Date().getFullYear()} আন-নাহদাহ অনলাইন ইনস্টিটিউট • উম্মাহর
+            জন্য ভালোবাসার সঙ্গে তৈরি
           </p>
           <div className="flex gap-6 text-sm">
             <a
               href="#"
               className="text-gray-500 hover:text-[#206380] transition"
             >
-              Privacy Policy
+              প্রাইভেসি পলিসি
             </a>
             <a
               href="#"
               className="text-gray-500 hover:text-[#206380] transition"
             >
-              Terms of Service
+              টার্মস অফ সার্ভিস
             </a>
           </div>
         </div>

@@ -5,86 +5,87 @@ import Title from "../ui/title";
 import Link from "next/link";
 
 export default function TeachersSection() {
-  const demoTeachers = [
-    {
-      id: 1,
-      name: "Dr. Mohammad Imran",
-      title: "Associate Professor of Hadith",
-      department: "Islamic Studies",
-      bio: "20+ years teaching Hadith, Tafsir, and classical Arabic. Passionate about student mentorship and research.",
-      subjects: ["Ṣaḥīḥ al-Bukhārī", "Tafsir", "Arabic Grammar"],
-      email: "imran@example.edu",
-      image:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
-      rating: 4.9,
-      years: 22,
-    },
-    {
-      id: 2,
-      name: "Ustadhah Ayesha Rahman",
-      title: "Senior Lecturer — Arabic Language",
-      department: "Languages",
-      bio: "Specialist in Arabic morphology and pedagogy. Loves designing interactive reading courses for adults.",
-      subjects: ["Nahw (Grammar)", "Sarf (Morphology)", "Reading Practice"],
-      email: "ayesha@example.edu",
-      image:
-        "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
-      rating: 4.8,
-      years: 12,
-    },
-    {
-      id: 3,
-      name: "Prof. Khalid Hasan",
-      title: "Professor — Fiqh & Usul",
-      department: "Jurisprudence",
-      bio: "Researcher of comparative fiqh with deep interest in community-led legal education.",
-      subjects: ["Fiqh", "Usul al-Fiqh", "Comparative Jurisprudence"],
-      email: "khalid@example.edu",
-      image:
-        "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
-      rating: 5.0,
-      years: 30,
-    },
-    {
-      id: 4,
-      name: "Dr. Noor Fatima",
-      title: "Lecturer — Islamic History",
-      department: "History",
-      bio: "Author and educator focusing on early Islamic civilization and female scholarship.",
-      subjects: ["Islamic History", "Biographies", "Research Methods"],
-      email: "noor@example.edu",
-      image:
-        "https://i.postimg.cc/QNFWys2W/vecteezy-profile-icon-design-vector-5544718.jpg",
-      rating: 4.7,
-      years: 9,
-    },
-    {
-      id: 5,
-      name: "Dr. Noor Fatima",
-      title: "Lecturer — Islamic History",
-      department: "History",
-      bio: "Author and educator focusing on early Islamic civilization and female scholarship.",
-      subjects: ["Islamic History", "Biographies", "Research Methods"],
-      email: "noor@example.edu",
-      image:
-        "https://images.unsplash.com/photo-1531123414780-fb0d0b3b8b5a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
-      rating: 4.7,
-      years: 9,
-    },
-    {
-      id: 6,
-      name: "Dr. Noor Fatima",
-      title: "Lecturer — Islamic History",
-      department: "History",
-      bio: "Author and educator focusing on early Islamic civilization and female scholarship.",
-      subjects: ["Islamic History", "Biographies", "Research Methods"],
-      email: "noor@example.edu",
-      image:
-        "https://images.unsplash.com/photo-1531123414780-fb0d0b3b8b5a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
-      rating: 4.7,
-      years: 9,
-    },
-  ];
+ const demoTeachers = [
+   {
+     id: 1,
+     name: "ড. মোহাম্মদ ইমরান",
+     title: "সহযোগী অধ্যাপক — হাদীস",
+     department: "ইসলামিক স্টাডিজ",
+     bio: "হাদীস, তাফসীর এবং ক্লাসিকাল আরবীতে ২০+ বছরের শিক্ষাদান। শিক্ষার্থী মেন্টরশিপ এবং গবেষণায় উত্সাহী।",
+     subjects: ["সহীহ আল-বুখারি", "তাফসীর", "আরবী ব্যাকরণ"],
+     email: "imran@example.edu",
+     image:
+       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
+     rating: 4.9,
+     years: 22,
+   },
+   {
+     id: 2,
+     name: "উস্তাযাহ আয়েশা রহমান",
+     title: "সিনিয়র লেকচারার — আরবী ভাষা",
+     department: "ভাষা",
+     bio: "আরবী ধ্বনিবিদ্যা এবং শিক্ষণ পদ্ধতির বিশেষজ্ঞ। প্রাপ্তবয়স্কদের জন্য ইন্টারেক্টিভ রিডিং কোর্স ডিজাইন করতে ভালোবাসেন।",
+     subjects: ["নাহও (ব্যাকরণ)", "সারফ (ধ্বনিবিদ্যা)", "পাঠ চর্চা"],
+     email: "ayesha@example.edu",
+     image:
+       "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
+     rating: 4.8,
+     years: 12,
+   },
+   {
+     id: 3,
+     name: "প্রফ. খালিদ হাসান",
+     title: "প্রফেসর — ফিকহ ও উসুল",
+     department: "জুরিসপ্রুডেন্স",
+     bio: "কমিউনিটি-নেতৃত্বাধীন আইন শিক্ষায় গভীর আগ্রহসহ তুলনামূলক ফিকহের গবেষক।",
+     subjects: ["ফিকহ", "উসুলুল ফিকহ", "তুলনামূলক আইনশাস্ত্র"],
+     email: "khalid@example.edu",
+     image:
+       "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
+     rating: 5.0,
+     years: 30,
+   },
+   {
+     id: 4,
+     name: "ড. নূর ফাতিমা",
+     title: "লেকচারার — ইসলামী ইতিহাস",
+     department: "ইতিহাস",
+     bio: "প্রাথমিক ইসলামী সভ্যতা এবং নারী শিক্ষায় মনোনিবেশকারী লেখক ও শিক্ষাবিদ।",
+     subjects: ["ইসলামী ইতিহাস", "জীবনী", "গবেষণা পদ্ধতি"],
+     email: "noor@example.edu",
+     image:
+       "https://i.postimg.cc/QNFWys2W/vecteezy-profile-icon-design-vector-5544718.jpg",
+     rating: 4.7,
+     years: 9,
+   },
+   {
+     id: 5,
+     name: "ড. নূর ফাতিমা",
+     title: "লেকচারার — ইসলামী ইতিহাস",
+     department: "ইতিহাস",
+     bio: "প্রাথমিক ইসলামী সভ্যতা এবং নারী শিক্ষায় মনোনিবেশকারী লেখক ও শিক্ষাবিদ।",
+     subjects: ["ইসলামী ইতিহাস", "জীবনী", "গবেষণা পদ্ধতি"],
+     email: "noor@example.edu",
+     image:
+       "https://images.unsplash.com/photo-1531123414780-fb0d0b3b8b5a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
+     rating: 4.7,
+     years: 9,
+   },
+   {
+     id: 6,
+     name: "ড. নূর ফাতিমা",
+     title: "লেকচারার — ইসলামী ইতিহাস",
+     department: "ইতিহাস",
+     bio: "প্রাথমিক ইসলামী সভ্যতা এবং নারী শিক্ষায় মনোনিবেশকারী লেখক ও শিক্ষাবিদ।",
+     subjects: ["ইসলামী ইতিহাস", "জীবনী", "গবেষণা পদ্ধতি"],
+     email: "noor@example.edu",
+     image:
+       "https://images.unsplash.com/photo-1531123414780-fb0d0b3b8b5a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&w=800",
+     rating: 4.7,
+     years: 9,
+   },
+ ];
+
 
   const [query, setQuery] = useState("");
 
@@ -103,9 +104,9 @@ export default function TeachersSection() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
         <Title
-          title1={"Meet Our"}
-          title2={"Honorable Teachers"}
-          subTitle="Learn from the world best and well educated teachers"
+          title1={"আমাদের "}
+          title2={" শিক্ষকবৃন্দ"}
+          subTitle="বিশ্বের সেরা ও সুশিক্ষিত শিক্ষকদের কাছ থেকে শিখুন"
         />
 
         <main>

@@ -19,10 +19,10 @@ export default function WhyChooseUs() {
           </span> */}
 
           <Title
-            title1={"Choose Us "}
-            title2={"Excellence for Your Faith"}
+            title1={"আমাদের "}
+            title2={"কেন বেছে নেবেন?"}
             subTitle={
-              "We combine authentic Islamic knowledge with modern learning methods, guided by qualified scholars."
+              "আমরা প্রামাণিক ইসলামী জ্ঞানকে আধুনিক শিক্ষণ পদ্ধতির সঙ্গে সংযুক্ত করি, যা যোগ্য আলেমদের দিকনির্দেশনায় পরিচালিত।"
             }
           />
         </div>
@@ -39,15 +39,15 @@ export default function WhyChooseUs() {
                 <BookOpen className="w-8 h-8 text-[#206380] group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-                500+ Authentic Video Courses
+                ৫০০+ প্রামাণিক ভিডিও কোর্স
               </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                From Tajweed to Seerah to Arabic grammar – every lesson taught
-                by qualified scholars with ijazah
+                তাজওয়ীদ, সিরাহ, আরবী ব্যাকরণ – প্রতিটি পাঠ যোগ্য আলেমদের দ্বারা
+                পরিচালিত
               </p>
               <div className="mt-6 flex items-center gap-2 text-[#206380] dark:text-[#8ecae6] font-medium">
                 <Check size={18} />
-                <span>100% based on Quran & Sunnah</span>
+                <span>১০০% কুরআন ও সুন্নাহ ভিত্তিক</span>
               </div>
             </div>
           </div>
@@ -59,15 +59,15 @@ export default function WhyChooseUs() {
                 <Users className="w-8 h-8 text-[#206380] group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-                World-Class Shuyukh & Teachers
+                বিশ্বমানের শিউখ ও শিক্ষক
               </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Learn directly from scholars who studied in Al-Azhar, Madinah
-                and Makkah – live & recorded
+                আল-আজহার,মক্কায ও মদিনা থেকে ডিগ্রিপ্রাপ্ত যোগ্য আলেমদের থেকে সরাসরি শেখা
+                – লাইভ ও রেকর্ডেড
               </p>
               <div className="mt-6 flex items-center gap-2 text-[#206380] dark:text-[#8ecae6] font-medium">
                 <Check size={18} />
-                <span>Real ijazah & certification</span>
+                <span>ভ্যালুয়েবল ইজাযাহ এবং সার্টিফিকেশন</span>
               </div>
             </div>
           </div>
@@ -79,15 +79,15 @@ export default function WhyChooseUs() {
                 <Infinity className="w-8 h-8 text-[#206380] group-hover:text-white transition-colors" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-3">
-                Lifetime Full Access + Updates
+                লাইফটাইম অ্যাক্সেস সুবিধা
               </h3>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                One payment = forever access + every new course added
-                automatically for free
+                একবার পেমেন্ট - আজীবন অ্যাক্সেস + নতুন কোর্স স্বয়ংক্রিয়ভাবে
+                ফ্রিতে যুক্ত হবে
               </p>
               <div className="mt-6 flex items-center gap-2 text-[#206380] dark:text-[#8ecae6] font-medium">
                 <Check size={18} />
-                <span>No monthly fees ever</span>
+                <span>মাসিক ফি নেই</span>
               </div>
             </div>
           </div>
@@ -96,9 +96,9 @@ export default function WhyChooseUs() {
         {/* Footer text */}
         <div className="text-center mt-20">
           <p className="text-gray-600 dark:text-gray-400 text-lg">
-            Join thousands of students who already say: <br />
+            হাজার হাজার শিক্ষার্থীর সাথে যোগ দিন যারা ইতিমধ্যেই বলে: <br />
             <span className="font-semibold text-[#206380] dark:text-[#8ecae6]">
-              “This is the best Islamic learning experience I ever had”
+              “এটি আমার ইসলামী জ্ঞান শিক্ষার সর্বশ্রেষ্ঠ অভিজ্ঞতা”
             </span>
           </p>
         </div>

@@ -18,12 +18,13 @@ const FeaturedCourses = () => {
         <FaBookOpen className="text-[#206380] dark:text-gray-300 text-6xl mb-6" />
       </div>
       <Title
-        title1={"Featured"}
-        title2={"Courses"}
+        title1={"আমাদের"}
+        title2={"সেরা কোর্সসমূহ"}
         subTitle={
-          "Explore our most popular and highly-rated courses, handpicked for you."
+          "আমাদের সবচেয়ে জনপ্রিয় এবং সেরা কোর্সসমূহ দেখুন, বিশেষভাবে আপনার জন্য নির্বাচিত"
         }
       />
+
       <section className="py-10 lg:py-12 ">
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {sixTopCourse.length === 0 ? (

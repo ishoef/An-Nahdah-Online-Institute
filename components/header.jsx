@@ -11,31 +11,25 @@ import { usePathname, useRouter } from "next/navigation";
 import { Heart } from "lucide-react";
 
 const navItems = [
-  { name: "Islamic Knowledge", href: "/islamic-knowledge" },
-  { name: "Skills", href: "/skills" },
-  { name: "Courses", href: "/courses" },
-  { name: "Instructors", href: "/instructors" },
-  { name: "Contact", href: "/contact" },
-  { name: "books", href: "/books" },
+  { name: "ইসলামী জ্ঞান", href: "/islamic-knowledge" },
+  { name: "স্কিলস", href: "/skills" },
+  { name: "কোর্সসমূহ", href: "/courses" },
+  { name: "শিক্ষকবৃন্দ", href: "/instructors" },
+  { name: "বইসমূহ", href: "/books" },
+  { name: "যোগাযোগ", href: "/contact" },
 ];
 
 const Header = () => {
-  // --- hooks (must always run, in same order) ---
   const [drawerOpen, setDrawerOpen] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
-  // any other hooks should go here as well
-
-  // derived values / non-hooks
   const session = false;
 
-  // useEffect must be called unconditionally
   useEffect(() => {
     setDrawerOpen(false);
   }, [pathname]);
 
-  // now it's safe to early-return based on pathname
   if (
     pathname?.includes("login") ||
     pathname?.includes("register") ||
@@ -44,7 +38,7 @@ const Header = () => {
     return null;
 
   const handleLogout = async () => {
-    alert("clicked log out");
+    alert("লগ আউট করা হয়েছে");
   };
 
   return (
@@ -53,7 +47,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#206380] dark:text-gray-100">
-          <Link href="/">An-Nahdah</Link>
+          <Link href="/">আন-নাহদাহ</Link>
         </div>
 
         {/* Desktop / Tablet Navigation */}
@@ -69,11 +63,10 @@ const Header = () => {
         <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
           <Link href={"/donate"}>
             <Button className={"cursor-pointer dark:text-white"}>
-              <Heart /> Donate
+              <Heart /> দান করুন
             </Button>
           </Link>
 
-          {/* Desktop Login/Profile */}
           {session ? (
             <div className="hidden md:flex">
               <p>P</p>
@@ -83,7 +76,7 @@ const Header = () => {
               asChild
               className="hidden md:inline-flex text-white bg-[#206380] hover:bg-[#225168] dark:bg-[#1f789b] dark:hover:bg-[#206380] text-sm sm:text-base px-4 py-2 transition-colors duration-200"
             >
-              <Link href="/login">Login</Link>
+              <Link href="/login">লগইন</Link>
             </Button>
           )}
 
@@ -93,7 +86,7 @@ const Header = () => {
           <button
             className="md:hidden text-gray-700 dark:text-gray-200 text-2xl w-10 h-10 flex items-center justify-center relative"
             onClick={() => setDrawerOpen(true)}
-            aria-label="Open menu"
+            aria-label="মেনু খুলুন"
           >
             <FaBars />
           </button>
@@ -108,12 +101,12 @@ const Header = () => {
       >
         <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
           <h2 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-            Menu
+            মেনু
           </h2>
           <button
             onClick={() => setDrawerOpen(false)}
             className="text-gray-700 dark:text-gray-200 text-xl"
-            aria-label="Close menu"
+            aria-label="মেনু বন্ধ করুন"
           >
             <FaTimes />
           </button>
@@ -124,7 +117,7 @@ const Header = () => {
             <CustomLink
               key={item.name}
               path={item.href}
-              className="block text-base font-medium text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
+              className="block text-base font-medium text-gray-700 dark:text-gray-200 hover:text-nhd-600 dark:hover:text-blue-400 transition-colors duration-200"
               onClick={() => setDrawerOpen(false)}
             >
               {item.name}
@@ -135,25 +128,25 @@ const Header = () => {
             <>
               <Link
                 href="/dashboard"
-                className="block bg-blue-500 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-sm sm:text-base transition-colors duration-200"
+                className="block bg-nhd-500 text-white px-4 py-2 rounded-lg text-center hover:bg-nhd-600 dark:bg-nhd-600 dark:hover:bg-nhd-700 text-sm sm:text-base transition-colors duration-200"
                 onClick={() => setDrawerOpen(false)}
               >
-                Dashboard
+                ড্যাশবোর্ড
               </Link>
               <button
                 onClick={handleLogout}
                 className="w-full bg-red-500 text-white px-4 py-2 rounded-lg text-center hover:bg-red-600 dark:bg-red-600 dark:hover:bg-red-700 text-sm sm:text-base transition-colors duration-200"
               >
-                Logout
+                লগ আউট
               </button>
             </>
           ) : (
             <Link
               href="/login"
-              className="block bg-blue-500 text-white px-4 py-2 rounded-lg text-center hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-sm sm:text-base transition-colors duration-200"
+              className="block bg-nhd-500 text-white px-4 py-2 rounded-lg text-center hover:bg-nhd-600 dark:bg-nhd-600 dark:hover:bg-nhd-700 text-sm sm:text-base transition-colors duration-200"
               onClick={() => setDrawerOpen(false)}
             >
-              Login
+              লগইন
             </Link>
           )}
         </div>

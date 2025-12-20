@@ -11,35 +11,36 @@ import {
 const features = [
   {
     icon: <FaVideo className="text-[#1f789b] text-2xl" />,
-    title: "Live Classes & Video Lessons",
-    desc: "Attend interactive live classes and access high-quality video lessons for a complete learning experience.",
+    title: "লাইভ ক্লাস ও ভিডিও লেসন",
+    desc: "ইন্টারঅ্যাকটিভ লাইভ ক্লাসে অংশ নিন এবং সম্পূর্ণ শেখার অভিজ্ঞতার জন্য উচ্চমানের ভিডিও লেসন উপভোগ করুন।",
   },
   {
     icon: <FaFolderOpen className="text-[#1f789b] text-2xl" />,
-    title: "Recorded Content & Videos for Every Lesson",
-    desc: "All lessons are recorded and available for download so you can learn at your own pace, anytime and anywhere.",
+    title: "প্রতিটি লেসনের রেকর্ডেড কনটেন্ট ও ভিডিও",
+    desc: "সব লেসন রেকর্ড করা থাকে এবং ডাউনলোডের সুবিধাসহ প্রদান করা হয়, যাতে আপনি যেকোনো সময়, যেকোনো জায়গা থেকে নিজের গতিতে শিখতে পারেন।",
   },
   {
     icon: <FaClipboardList className="text-[#1f789b] text-2xl" />,
-    title: "Quizzes",
-    desc: "Test your understanding with quizzes after each lesson and track your progress effectively.",
+    title: "কুইজ ও মূল্যায়ন",
+    desc: "প্রতিটি লেসনের পর কুইজের মাধ্যমে আপনার বোঝাপড়া যাচাই করুন এবং শেখার অগ্রগতি পর্যবেক্ষণ করুন।",
   },
   {
     icon: <FaCode className="text-[#1f789b] text-2xl" />,
-    title: "Assignments",
-    desc: "Practice hands-on assignments with every module to strengthen your learning and apply concepts in real scenarios.",
+    title: "অ্যাসাইনমেন্ট",
+    desc: "প্রতিটি মডিউলের সাথে হাতে-কলমে অ্যাসাইনমেন্ট অনুশীলনের মাধ্যমে জ্ঞান আরও মজবুত করুন এবং বাস্তব ক্ষেত্রে প্রয়োগ করুন।",
   },
   {
     icon: <FaUsers className="text-[#1f789b] text-2xl" />,
-    title: "Support Sessions",
-    desc: "Join live support sessions to ask questions and get guidance on any course topic from our experts.",
+    title: "সাপোর্ট সেশন",
+    desc: "লাইভ সাপোর্ট সেশনে অংশ নিয়ে কোর্স সম্পর্কিত যেকোনো প্রশ্ন করুন এবং অভিজ্ঞ শিক্ষকদের দিকনির্দেশনা গ্রহণ করুন।",
   },
   {
     icon: <FaTasks className="text-[#1f789b] text-2xl" />,
-    title: "World’s Best Teachers",
-    desc: "Learn from top educators and work on real projects to build practical skills and a strong portfolio.",
+    title: "বিশ্বমানের শিক্ষকবৃন্দ",
+    desc: "অভিজ্ঞ ও দক্ষ শিক্ষকদের কাছ থেকে শিক্ষা গ্রহণ করুন এবং বাস্তব প্রকল্পে কাজ করে প্রয়োজনীয় দক্ষতা ও শক্তিশালী পোর্টফোলিও গড়ে তুলুন।",
   },
 ];
+
 
 export default function CourseFeatures() {
   return (
@@ -48,13 +49,14 @@ export default function CourseFeatures() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#102b3c] dark:text-white">
-            Our Course{" "}
+            আমাদের কোর্সের{" "}
             <span className="text-[#206380] dark:text-blue-400">
-              Learning Materials
+              শিক্ষা উপকরণসমূহ
             </span>
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
-            Here’s everything included in our courses to help you learn better
+            আপনার শেখাকে আরও সহজ ও কার্যকর করতে আমাদের কোর্সে যা কিছু
+            অন্তর্ভুক্ত রয়েছে
           </p>
         </div>
 

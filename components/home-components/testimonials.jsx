@@ -1,29 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Title from "../ui/title";
 
 const testimonials = [
   {
     name: "Aisha Rahman",
-    role: "Student, Malaysia",
-    text: "The Tafsir courses have deepened my understanding of the Quran. The offline feature lets me learn during my commute. Alhamdulillah!",
+    role: "ছাত্র/ছাত্রী, মালয়েশিয়া",
+    text: "তাফসীর কোর্সগুলো কুরআনের আমার বোঝাপড়া আরও গভীর করেছে। অফলাইন ফিচারটি আমাকে যাত্রাপথে শেখার সুযোগ দেয়। আলহামদুলিল্লাহ!",
   },
   {
     name: "Omar Abdullah",
-    role: "Entrepreneur, UAE",
-    text: "I completed the digital marketing course and launched my halal business online. The instructors are knowledgeable and supportive.",
+    role: "উদ্যোক্তা, ইউএই",
+    text: "আমি ডিজিটাল মার্কেটিং কোর্স সম্পন্ন করেছি এবং আমার হালাল ব্যবসা অনলাইনে চালু করেছি। প্রশিক্ষকরা জ্ঞানসম্পন্ন এবং সহায়ক।",
   },
   {
     name: "Zainab Ahmed",
-    role: "Teacher, UK",
-    text: "An-Nahdah combines authentic Islamic knowledge with practical skills. The Arabic grammar course helped me teach my students better.",
+    role: "শিক্ষক, যুক্তরাজ্য",
+    text: "আন-নাহদাহ আসল ইসলামী জ্ঞানকে ব্যবহারিক দক্ষতার সঙ্গে সংযুক্ত করে। আরবী ব্যাকরণ কোর্সটি আমাকে শিক্ষার্থীদের আরও ভালোভাবে শেখাতে সাহায্য করেছে।",
   },
   ...Array.from({ length: 20 }).map((_, i) => ({
-    name: `Student ${i + 1}`,
-    role: `Learner, Country ${i + 1}`,
-    text: `This is a sample testimonial message number ${
+    name: `ছাত্র/ছাত্রী ${i + 1}`,
+    role: `শিক্ষার্থী, দেশ ${i + 1}`,
+    text: `এটি নমুনা প্রশংসাপত্রের বার্তা নং ${
       i + 1
-    }, sharing their success story.`,
+    }, যা তাদের সফলতার গল্প শেয়ার করছে।`,
   })),
 ];
 
@@ -54,7 +55,7 @@ function MarqueeRow({ reverse }) {
               {Array.from({ length: 5 }).map((_, index) => (
                 <span
                   key={index}
-                  className="text-blue-500 dark:text-yellow-400 text-lg"
+                  className="text-nhd-500 dark:text-yellow-400 text-lg"
                 >
                   ★
                 </span>
@@ -83,17 +84,13 @@ export default function TestimonialsSlider() {
   return (
     <section className="py-20 relative bg-gradient-to-r from-[#b1e5f0] via-[#d5f2f8] to-[#b1e5f0] dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto text-center mb-12 px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#153151] dark:text-white">
-            Students{" "}
-            <span className="text-[#206380] dark:text-blue-400">
-              Success Story
-            </span>
-          </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
-            Hear from our community of learners
-          </p>
-        </div>
+        <Title
+          title1={"শিক্ষার্থীদের"}
+          title2={"সফলতার গল্প"}
+          subTitle={
+            "আমাদের শিক্ষার্থীিদের রিভিউ দেখুন এবং তাদের অভিজ্ঞতা শুনুন"
+          }
+        />
       </div>
 
       <div className="space-y-10 px-4 sm:px-6 lg:px-8">
