@@ -5,12 +5,12 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[#0b5f78] text-white dark:bg-gray-900 dark:text-gray-100">
+    <section className="relative flex flex-col justify-between overflow-hidden bg-[#0b5f78] text-white dark:bg-gray-900 dark:text-gray-100">
       {/* Top Hero */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 md:py-24 flex flex-col-reverse md:flex-row gap-14 items-center">
         {/* Left Content */}
-        <div className="space-y-6 w-full md:basis-2/3 text-center md:text-left">
-          <h1 className="text-3xl font-bangla sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+        <div className="space-y-6 w-full lg:basis-2/3 text-center lg:text-left">
+          <h1 className="text-3xl font-bangla sm:text-4xl md:text-6xl  font-extrabold leading-tight">
             {/* Master Islam & Modern */}
             পড়, তোমার প্রভুর নামে
             <br />
@@ -25,7 +25,7 @@ export default function Hero() {
             একসাথে একটি সুন্দর, ব্যবহার বান্ধব প্ল্যাটফর্মে।
           </p>
 
-          <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
+          <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
             <Link
               href="#"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-[#0b5f78] font-semibold hover:bg-white/90 transition dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-200"
@@ -42,7 +42,7 @@ export default function Hero() {
         </div>
 
         {/* Right Image & Badges */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <div className="relative w-full flex justify-center md:justify-end">
             {/* Image */}
             <div className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[520px]">
@@ -91,13 +91,13 @@ export default function Hero() {
 
       {/* Bottom Stats Section */}
       <div className="bg-[#b7e4f8] text-[#0b5f78] rounded-t-4xl dark:bg-gray-800 dark:text-gray-100">
-        <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5 items-start">
+        <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 sm:grid-cols-3 lg:grid-cols-5 items-start">
           {/* Text */}
-          <div className="space-y-3 sm:col-span-2 text-center sm:text-left">
+          <div className="space-y-3 sm:col-span-3 lg:col-span-2 text-center lg:text-left">
             <h3 className="text-xl sm:text-2xl font-bold leading-tight">
-              আপনার নির্ভরযোগ্য প্ল্যাটফর্ম ইসলামী শিক্ষার জন্য
+              ইসলামী শিক্ষার নির্ভরযোগ্য প্ল্যাটফর্ম
             </h3>
-            <p className="text-sm leading-relaxed text-[#0b5f78]/80 dark:text-gray-400 max-w-md mx-auto sm:mx-0">
+            <p className="text-sm leading-relaxed text-[#0b5f78]/80 dark:text-gray-400 max-w-md mx-auto lg:mx-0">
               একটি নির্ভরযোগ্য শিক্ষার স্থান যা আসল ইসলামী জ্ঞান প্রদান করে,
               যোগ্য আলিমদের দ্বারা পরিচালিত সুনির্দিষ্ট ও বিশ্বাসযোগ্য
               প্রোগ্রামের মাধ্যমে।

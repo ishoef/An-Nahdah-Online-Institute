@@ -44,14 +44,15 @@ const Header = () => {
   return (
     <header className="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 transition-colors duration-300">
       <NetworkStatus />
+
       <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#206380] dark:text-gray-100">
           <Link href="/">আন-নাহদাহ</Link>
         </div>
 
-        {/* Desktop / Tablet Navigation */}
-        <nav className="hidden md:flex space-x-4 lg:space-x-6 font-medium items-center">
+        {/* Nav items - large screens only */}
+        <nav className="hidden lg:flex space-x-4 lg:space-x-6 font-medium items-center">
           {navItems.map((item) => (
             <CustomLink key={item.name} path={item.href}>
               {item.name}
@@ -59,7 +60,7 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Right Section */}
+        {/* Right Section - show on all devices */}
         <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
           <Link href={"/donate"}>
             <Button className={"cursor-pointer dark:text-white"}>
@@ -67,29 +68,35 @@ const Header = () => {
             </Button>
           </Link>
 
-          {session ? (
-            <div className="hidden md:flex">
+          <ThemeToggle />
+
+          {/* Desktop Login */}
+          {session && (
+            <div className="hidden lg:flex">
               <p>P</p>
             </div>
-          ) : (
-            <Button
-              asChild
-              className="hidden md:inline-flex text-white bg-[#206380] hover:bg-[#225168] dark:bg-[#1f789b] dark:hover:bg-[#206380] text-sm sm:text-base px-4 py-2 transition-colors duration-200"
-            >
-              <Link href="/login">লগইন</Link>
-            </Button>
           )}
-
-          <ThemeToggle />
 
           {/* Mobile Drawer Toggle */}
           <button
-            className="md:hidden text-gray-700 dark:text-gray-200 text-2xl w-10 h-10 flex items-center justify-center relative"
+            className="lg:hidden text-gray-700 dark:text-gray-200 text-2xl w-10 h-10 flex items-center justify-center relative"
             onClick={() => setDrawerOpen(true)}
             aria-label="মেনু খুলুন"
           >
             <FaBars />
           </button>
+
+          {/* Desktop Login Button */}
+          {!session && (
+            <div className="hidden lg:block">
+              <Button
+                asChild
+                className="text-white bg-[#206380] hover:bg-[#225168] dark:bg-[#1f789b] dark:hover:bg-[#206380] text-sm sm:text-base px-4 py-2 transition-colors duration-200"
+              >
+                <Link href="/login">লগইন</Link>
+              </Button>
+            </div>
+          )}
         </div>
       </div>
 
@@ -124,7 +131,19 @@ const Header = () => {
             </CustomLink>
           ))}
 
-          {session ? (
+          {/* Mobile Login */}
+          {!session && (
+            <Link
+              href="/login"
+              className="block bg-nhd-500 text-white px-4 py-2 rounded-lg text-center hover:bg-nhd-600 dark:bg-nhd-600 dark:hover:bg-nhd-700 text-sm sm:text-base transition-colors duration-200"
+              onClick={() => setDrawerOpen(false)}
+            >
+              লগইন
+            </Link>
+          )}
+
+          {/* Mobile Logout (if session) */}
+          {session && (
             <>
               <Link
                 href="/dashboard"
@@ -140,14 +159,6 @@ const Header = () => {
                 লগ আউট
               </button>
             </>
-          ) : (
-            <Link
-              href="/login"
-              className="block bg-nhd-500 text-white px-4 py-2 rounded-lg text-center hover:bg-nhd-600 dark:bg-nhd-600 dark:hover:bg-nhd-700 text-sm sm:text-base transition-colors duration-200"
-              onClick={() => setDrawerOpen(false)}
-            >
-              লগইন
-            </Link>
           )}
         </div>
       </div>

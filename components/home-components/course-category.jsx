@@ -58,7 +58,7 @@ const courses = [
 const CourseCategory = () => {
   return (
     <section className="py-16 lg:py-20 border-b bg-background dark:bg-gray-900 transition-colors duration-500">
-      <div className="container mx-auto px-4 lg:px-8">
+      <div className="container mx-auto px-4 md:px-0 lg:px-8">
         {/* Section Header */}
         <Title
           title1={"আমাদের"}
