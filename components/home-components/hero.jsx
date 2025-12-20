@@ -10,18 +10,19 @@ export default function Hero() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 md:py-24 flex flex-col-reverse md:flex-row gap-14 items-center">
         {/* Left Content */}
         <div className="space-y-6 w-full md:basis-2/3 text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
-            Master Islam & Modern
+          <h1 className="text-3xl font-bangla sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+            {/* Master Islam & Modern */}
+            পড়, তোমার প্রভুন নামে
             <br />
             <span className="text-nhd-300 dark:text-nhd-400">
-              Skills Together
+              যিনি তোমাকে সৃষ্টি করেছেন{" "}
             </span>
           </h1>
 
-          <p className="max-w-xl mx-auto md:mx-0 text-white/80 dark:text-gray-400 text-base sm:text-lg">
-            An-Nahdah Institute brings you authentic Islamic education from
-            qualified scholars, combined with practical life skills — all in one
-            beautiful, easy-to-use platform.
+          <p className="max-w-xl font-bangla mx-auto md:mx-0 text-white/80 dark:text-gray-400 text-base sm:text-lg">
+            আন-নাহদাহ ইনস্টিটিউট আপনাদের জন্য নিয়ে আসে আসল ইসলামী শিক্ষা, যোগ্য
+            আলিমদের দ্বারা প্রযোজ্য, সঙ্গে আধুনিক জীবনের ব্যবহারিক দক্ষতাও — সব
+            একসাথে একটি সুন্দর, ব্যবহার বান্ধব প্ল্যাটফর্মে।
           </p>
 
           <div className="flex flex-wrap gap-4 pt-4 justify-center md:justify-start">
@@ -35,7 +36,7 @@ export default function Hero() {
               href="/courses"
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-white/40 hover:bg-white/10 transition dark:border-gray-400/40 dark:hover:bg-gray-800"
             >
-              Explore Courses
+              কোর্সগুলো দেখুন
             </Link>
           </div>
         </div>
@@ -94,20 +95,20 @@ export default function Hero() {
           {/* Text */}
           <div className="space-y-3 sm:col-span-2 text-center sm:text-left">
             <h3 className="text-xl sm:text-2xl font-bold leading-tight">
-              Your trusted platform for Islamic education
+              আপনার নির্ভরযোগ্য প্ল্যাটফর্ম ইসলামী শিক্ষার জন্য
             </h3>
             <p className="text-sm leading-relaxed text-[#0b5f78]/80 dark:text-gray-400 max-w-md mx-auto sm:mx-0">
-              A reliable learning space offering authentic Islamic knowledge,
-              guided by qualified scholars through structured and trustworthy
-              programs.
+              একটি নির্ভরযোগ্য শিক্ষার স্থান যা আসল ইসলামী জ্ঞান প্রদান করে,
+              যোগ্য আলিমদের দ্বারা পরিচালিত সুনির্দিষ্ট ও বিশ্বাসযোগ্য
+              প্রোগ্রামের মাধ্যমে।
             </p>
           </div>
 
           {/* Stats */}
           {[
-            { value: "3K+", label: "Worldwide Learners" },
-            { value: "400+", label: "Live & Recorded Sessions" },
-            { value: "50+", label: "Certified Instructors" },
+            { value: "৩,০০০+", label: "বিশ্বজুড়ে শিক্ষার্থী" },
+            { value: "৪০০+", label: "লাইভ ও রেকর্ড করা সেশন" },
+            { value: "৫০+", label: "সার্টিফায়েড শিক্ষক" },
           ].map((item, i) => (
             <div
               key={i}

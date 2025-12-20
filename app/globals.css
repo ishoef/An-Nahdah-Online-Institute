@@ -1,9 +1,14 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
 
 /* @plugin "tailwindcss-animate";
 @import "tw-animate-css"; */
 
 @custom-variant dark (&:is(.dark *));
+
+body{
+  font-family: 'Hind Siliguri';
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -114,6 +119,7 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* custom color base on my primary color */
 @theme {
   --color-primary: #206380;
   --color-nhd-50: #effbfc;
@@ -127,6 +133,11 @@
   --color-nhd-800: #225168;
   --color-nhd-900: #204459;
   --color-nhd-950: #102b3c;
+}
+
+/* Custom Bangla Fonts */
+@theme{
+  --font-bangla: "Hind Siliguri", sans-serif;
 }
 
 @layer base {
