@@ -94,8 +94,8 @@ export default function Hero() {
         <div className="mx-auto max-w-7xl px-6 py-12 grid gap-8 sm:grid-cols-3 lg:grid-cols-5 items-start">
           {/* Text */}
           <div className="space-y-3 sm:col-span-3 lg:col-span-2 text-center lg:text-left">
-            <h3 className="text-xl sm:text-2xl font-bold leading-tight">
-              ইসলামী শিক্ষার নির্ভরযোগ্য প্ল্যাটফর্ম
+            <h3 className="text-xl sm:text-2xl dark:text-white font-bold leading-tight">
+              <span className="text-nhd-700 dark:text-nhd-400">ইসলামী শিক্ষার</span> নির্ভরযোগ্য প্ল্যাটফর্ম
             </h3>
             <p className="text-sm leading-relaxed text-[#0b5f78]/80 dark:text-gray-400 max-w-md mx-auto lg:mx-0">
               একটি নির্ভরযোগ্য শিক্ষার স্থান যা আসল ইসলামী জ্ঞান প্রদান করে,
