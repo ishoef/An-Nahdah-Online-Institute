@@ -299,7 +299,7 @@ export default function PrivacyPolicyPage() {
                       activeCategory === category.id ? null : category.id
                     )
                   }
-                  className="w-full px-5 sm:px-8 py-5 sm:py-6 flex justify-between items-center text-left bg-[#206380]/10 dark:bg-[#206380]/20"
+                  className="w-full cursor-pointer px-5 sm:px-8 py-5 sm:py-6 flex justify-between items-center text-left bg-[#206380]/10 dark:bg-[#206380]/20"
                 >
                   <div className="flex items-center gap-3 sm:gap-5">
                     <Icon className="w-8 h-8 sm:w-10 sm:h-10 text-[#206380] dark:text-white" />

@@ -110,11 +110,11 @@ export default function LessonPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-200">
-      <div className="max-w-10/12 mx-auto p-4 md:p-8">
+      <div className="max-w-7xl sm:max-w-10/12  mx-auto p-4 md:p-8">
         <header className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100">
-              {singleLesson.title}
+              {singleLesson?.title}
             </h1>
             <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
               {title}
